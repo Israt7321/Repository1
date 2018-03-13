@@ -19,6 +19,7 @@ public class Facebook {
 	@BeforeTest
 	public void OpenBrowser() throws InterruptedException {
 		driver = new FirefoxDriver();
+		driver.manage().window().maximize();
 		Thread.sleep(4000);
 		String facebookTitle= driver.getTitle();
 	System.out.println("Title is:"+ facebookTitle);	
@@ -26,7 +27,6 @@ public class Facebook {
 	@Test
 	public void FacebookTest() throws InterruptedException {
 		driver.get("https://www.facebook.com/");
-		driver.manage().window().maximize();
 		driver.findElement(By.name("firstname")).sendKeys("Israt");
 		driver.findElement(By.name("lastname")).sendKeys("Jahan");
 		driver.findElement(By.name("reg_email__")).sendKeys("oyshi18@yahoo.com");
