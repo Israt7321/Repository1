@@ -32,7 +32,7 @@ public class Facebook {
 		driver.findElement(By.name("reg_email__")).sendKeys("oyshi18@yahoo.com");
 		driver.findElement(By.name("reg_email_confirmation__")).sendKeys("oyshi18@yahoo.com");
 		driver.findElement(By.name("reg_passwd__" )).sendKeys("ssss");
-		Thread.sleep(4000);
+		
 		Select monthSelect= new Select(driver.findElement(By.id("month")));
 		monthSelect.selectByIndex(1);
 		Select daySelect= new Select(driver.findElement(By.id("day")));
